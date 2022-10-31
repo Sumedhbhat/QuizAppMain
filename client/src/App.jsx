@@ -19,7 +19,7 @@ const App = () => {
           <Route path='/about' exact element={<About />} />
           <Route path='/highScores' exact element={<HighScores />} />
           <Route path='/quiz' exact element={<Quiz />} />
-          <Route path='/addRecord' exact element={<AddRecord />} />
+          <Route path='/addRecord' exact element={<AddRec />} />
           <Route path='/add' exact element={<AddRec />} />
           <Route path='*' element={<NotFound />} />
         </Routes>

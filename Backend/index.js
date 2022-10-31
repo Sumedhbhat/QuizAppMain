@@ -9,7 +9,9 @@ const path = require("path");
 const scores = require("./routes/scores");
 const questions = require("./routes/questions");
 
-mongoose.connect(process.env.DATABASE);
+mongoose.connect(
+  "mongodb+srv://sumedhbhat01:password1234@quizstore.spzeu.mongodb.net/?retryWrites=true&w=majority"
+);
 
 const conn = mongoose.connection;
 conn.once("open", () => {
