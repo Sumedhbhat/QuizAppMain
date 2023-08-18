@@ -10,7 +10,7 @@ const scores = require("./routes/scores");
 const questions = require("./routes/questions");
 
 mongoose.connect(
-  "mongodb+srv://sumedhbhat01:password1234@quizstore.spzeu.mongodb.net/?retryWrites=true&w=majority"
+  process.env.DATABASE
 );
 
 const conn = mongoose.connection;
