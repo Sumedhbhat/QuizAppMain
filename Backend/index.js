@@ -9,9 +9,7 @@ const path = require("path");
 const scores = require("./routes/scores");
 const questions = require("./routes/questions");
 
-mongoose.connect(
-  process.env.DATABASE
-);
+mongoose.connect(process.env.DATABASE);
 
 const conn = mongoose.connection;
 conn.once("open", () => {
@@ -20,7 +18,7 @@ conn.once("open", () => {
 
 const app = express();
 app.use(cors());
-app.use(express.static(path.join(__dirname, "../client/build/index.html")));
+app.use(express.static(path.join(__dirname, "../client/build")));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
