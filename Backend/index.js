@@ -20,11 +20,11 @@ conn.once("open", () => {
 
 const app = express();
 app.use(cors());
-app.use(express.static(path.join(__dirname, "../client/index.html")));
+app.use(express.static(path.join(__dirname, "../client/build/index.html")));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.get("/", (req, res) => {
+app.get("/connect", (req, res) => {
   res.json({ message: "successfully connected" });
 });
 
